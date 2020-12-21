@@ -20,15 +20,21 @@
         li {
             display: inline;
         }
+        .top-bar {
+            padding: 20px;
+            justify-content: space-between;
+        }
         .top-bar-left {
-            padding: 20px; 
+            
         }
         .top-bar-right {
-            padding: 20px;
+            
         }
-        .logo {
+        .logo-container {
             justify-content: center;
             padding-top: 100px;
+        }
+        .logo {
         }
         .search {
             justify-content: center;
@@ -37,41 +43,50 @@
             justify-content: center;
             padding: 15px;
         }
+        .button-search {
+            margin: 5px;
+        }
+        .button-lucky {
+            margin: 5px;
+        }
         .bottom-bar {
             background-color: #f2f2f2;;
             padding: 15px;
             flex-direction: row;
+            justify-content: space-between;
         }
         </style>
     </head>
     <body>
         <header>
-            <div class="top-bar-left">
-                <ul>
-                    <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
-                    <li><a href="https://store.google.com">Store</a></li>
-                </ul>
-            </div>
-            <div class=" top-bar-right">
-                <ul>
-                    <li><a href=https://mail.google.com/mail>Gmail</a></li>
-                    <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
-                </ul>
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul>
+                        <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+                        <li><a href="https://store.google.com">Store</a></li>
+                    </ul>
+                </div>
+                <div class=" top-bar-right">
+                    <ul>
+                        <li><a href=https://mail.google.com/mail>Gmail</a></li>
+                        <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
-        <div class="logo">
-            <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
+        <div class="logo-container">
+            <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
         </div>
         <div class="search">
             <input type="text" id="search" name="search" size="40">
         </div>
         <div class="buttons">
-            <div>
+            <div class="button-search">
                 <button type="button" id="search-submit" name="search-submit">
                     Google Search
                 </button>
             </div>
-            <div>
+            <div class="button-lucky">
                 <button type="button" id="lucky" name="lucky">
                     I'm Feeling Lucky
                 </button>
@@ -79,14 +94,14 @@
         </div>
         <footer>
             <div class="bottom-bar">
-                <div>
+                <div class="bottom-bar-left">
                     <ul>
                         <li><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
                         <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
                         <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class=" bottom-bar-right">
                     <ul>
                         <li><a href="https://policies.google.com/privacy?fg=1">Privacy</a></li>
                         <li><a href="https://policies.google.com/terms?fg=1">Terms</a></li>
