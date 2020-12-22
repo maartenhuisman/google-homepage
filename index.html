@@ -11,30 +11,32 @@
             padding: 0;
         }
         li a {
-            color: rgba(0,0,0,0.87);
             text-decoration: none;
             font-family: arial,sans-serif;
+            color: #5f6368;
             width: 60px;
             text-align: center;
         }
         li {
             display: inline;
+            padding: 13px;
+        }
+        .box-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                "header header header"
+                "main main main"
+                "footer footer footer";
         }
         .top-bar {
             padding: 20px;
             justify-content: space-between;
         }
-        .top-bar-left {
-            
-        }
-        .top-bar-right {
-            
-        }
         .logo-container {
             justify-content: center;
             padding-top: 100px;
-        }
-        .logo {
         }
         .search {
             justify-content: center;
@@ -58,57 +60,59 @@
         </style>
     </head>
     <body>
-        <header>
-            <div class="top-bar">
-                <div class="top-bar-left">
-                    <ul>
-                        <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
-                        <li><a href="https://store.google.com">Store</a></li>
-                    </ul>
+        <div class="box-container"></div>
+            <header>
+                <div class="top-bar">
+                    <div class="top-bar-left">
+                        <ul>
+                            <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+                            <li><a href="https://store.google.com">Store</a></li>
+                        </ul>
+                    </div>
+                    <div class=" top-bar-right">
+                        <ul>
+                            <li><a href=https://mail.google.com/mail>Gmail</a></li>
+                            <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class=" top-bar-right">
-                    <ul>
-                        <li><a href=https://mail.google.com/mail>Gmail</a></li>
-                        <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
-                    </ul>
+            </header>
+            <div class="logo-container">
+                <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
+            </div>
+            <div class="search">
+                <input type="text" id="search" name="search" size="40">
+            </div>
+            <div class="buttons">
+                <div class="button-search">
+                    <button type="button" id="search-submit" name="search-submit">
+                        Google Search
+                    </button>
+                </div>
+                <div class="button-lucky">
+                    <button type="button" id="lucky" name="lucky">
+                        I'm Feeling Lucky
+                    </button>
                 </div>
             </div>
-        </header>
-        <div class="logo-container">
-            <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
+            <footer>
+                <div class="bottom-bar">
+                    <div class="bottom-bar-left">
+                        <ul class="bottom-bar-text-color">
+                            <li><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+                            <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+                            <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+                        </ul>
+                    </div>
+                    <div class=" bottom-bar-right">
+                        <ul class="bottom-bar-text-color">
+                            <li><a href="https://policies.google.com/privacy?fg=1">Privacy</a></li>
+                            <li><a href="https://policies.google.com/terms?fg=1">Terms</a></li>
+                            <li><a href="https://www.google.com/preferences?hl=en">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <div class="search">
-            <input type="text" id="search" name="search" size="40">
-        </div>
-        <div class="buttons">
-            <div class="button-search">
-                <button type="button" id="search-submit" name="search-submit">
-                    Google Search
-                </button>
-            </div>
-            <div class="button-lucky">
-                <button type="button" id="lucky" name="lucky">
-                    I'm Feeling Lucky
-                </button>
-            </div>
-        </div>
-        <footer>
-            <div class="bottom-bar">
-                <div class="bottom-bar-left">
-                    <ul>
-                        <li><a href="https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
-                        <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
-                        <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
-                    </ul>
-                </div>
-                <div class=" bottom-bar-right">
-                    <ul>
-                        <li><a href="https://policies.google.com/privacy?fg=1">Privacy</a></li>
-                        <li><a href="https://policies.google.com/terms?fg=1">Terms</a></li>
-                        <li><a href="https://www.google.com/preferences?hl=en">Settings</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </body>
 </html>
