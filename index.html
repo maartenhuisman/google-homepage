@@ -5,6 +5,10 @@
         div {
             display: flex;
         }
+        header {
+            display: flex;
+            width: 100%;
+        }
         ul {
             list-style-type: none;
             margin: 0;
@@ -24,15 +28,19 @@
         }
         .main {
             flex-direction: column;
+            width: 100%;
         }
         .top-bar {
             padding: 20px;
             flex-direction: row;
+            flex-grow: 1;
             justify-content: space-between;
+            width: 100%;
         }
         .logo-container {
             justify-content: center;
             padding-top: 100px;
+            width: 100%;
         }
         .search {
             justify-content: center;
@@ -54,11 +62,20 @@
             justify-content: space-between;
         }
         #box-container {
-            position: relative;
             min-height: 100vh;
         }
         #content-wrap {
             padding-bottom: 2rem;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        #header {
+            position: absolute;
+            display: flex;
+            top: 0;
+            width: 100%;
+            height: 2rem;
+            flex-grow: 1;
         }
         #footer {
             position: absolute;
@@ -71,42 +88,44 @@
     <body>
         <div id="box-container">
             <div id="content-wrap">
-                <header>
-                    <div class="top-bar">
-                        <div class="top-bar-left">
-                            <ul>
-                                <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
-                                <li><a href="https://store.google.com">Store</a></li>
-                            </ul>
+                <div id="header">
+                    <header>
+                        <div class="top-bar">
+                            <div class="top-bar-left">
+                                <ul>
+                                    <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+                                    <li><a href="https://store.google.com">Store</a></li>
+                                </ul>
+                            </div>
+                            <div class=" top-bar-right">
+                                <ul>
+                                    <li><a href=https://mail.google.com/mail>Gmail</a></li>
+                                    <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class=" top-bar-right">
-                            <ul>
-                                <li><a href=https://mail.google.com/mail>Gmail</a></li>
-                                <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
-                            </ul>
-                        </div>
+                    </header>
+                </div>
+                <div class="main">
+                    <div class="logo-container">
+                        <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
                     </div>
-                </header>
-                    <div class="main">
-                        <div class="logo-container">
-                            <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
-                        </div>
-                        <div class="search">
-                            <input type="text" id="search" name="search" size="40">
-                        </div>
-                        <div class="buttons">
-                            <div class="button-search">
-                                <button type="button" id="search-submit" name="search-submit">
+                    <div class="search">
+                        <input type="text" id="search" name="search" size="40">
+                    </div>
+                    <div class="buttons">
+                        <div class="button-search">
+                            <button type="button" id="search-submit" name="search-submit">
                                     Google Search
-                                </button>
-                            </div>
-                            <div class="button-lucky">
-                                <button type="button" id="lucky" name="lucky">
-                                    I'm Feeling Lucky
-                                </button>
-                            </div>
+                            </button>
+                        </div>
+                        <div class="button-lucky">
+                            <button type="button"id="lucky" name="lucky">
+                                I'm Feeling Lucky
+                            </button>
                         </div>
                     </div>
+                </div>
                 <footer id="footer">
                     <div class="bottom-bar">
                         <div class="bottom-bar-left">
