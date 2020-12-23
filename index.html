@@ -2,6 +2,10 @@
 <html>
     <head>
         <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
         div {
             display: flex;
         }
@@ -41,6 +45,9 @@
             justify-content: center;
             padding-top: 200px;
         }
+        .search-container {
+            justify-content: center;
+        }
         .search {
             justify-content: center;
             background-color: chocolate;
@@ -49,6 +56,7 @@
             border-width: 1px;
             box shadow; none;
             height: 44px;
+            width: 482px;
             margin-top: 20px;
         }
         .buttons {
@@ -132,8 +140,10 @@
                     <div class="logo-container">
                         <img class="logo" src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="The Google logo.">
                     </div>
-                    <div class="search">
-                        <input type="search" id="search" name="search" size="40">
+                    <div class="search-container">
+                        <div class="search">
+                            <input type="search" id="search" name="search" size="40">
+                        </div>
                     </div>
                     <div class="buttons">
                         <div class="button-search">
