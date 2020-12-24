@@ -2,7 +2,7 @@
 <html>
     <head>
         <style type="text/css">
-        html, body {
+        html, body, div {
             margin: 0;
             padding: 0;
         }
@@ -34,7 +34,7 @@
             flex-direction: column;
         }
         .top-bar {
-            padding: 20px;
+            padding-top: 20px;
             flex-direction: row;
             flex-grow: 1;
             justify-content: space-between;
@@ -50,24 +50,25 @@
         }
         .search {
             justify-content: center;
-            background-color: chocolate;
+            background-color: white;
             border-radius: 25px;
-            border-color: #dfe1e5;
-            border-width: 1px;
+            border: 1px solid #dfe1e5;
             box shadow; none;
             height: 44px;
-            width: 482px;
+            width: 584px;
             margin-top: 20px;
         }
         .buttons {
             justify-content: center;
-            padding: 15px;
+            margin: 20px;
         }
         .button-search {
-            margin: 5px;
+            margin-right: 5px;
+            background-color: #f2f2f2;
         }
         .button-lucky {
-            margin: 5px;
+            margin-left: 5px;
+            background-color: #f2f2f2;
         }
         .bottom-bar {
             background-color: #f2f2f2;
@@ -91,6 +92,12 @@
             height: 2rem;
             flex-grow: 1;
         }
+        #google-apps {
+            -webkit-filter: invert(1);
+            align-content: center;
+            width: 10%;
+            height: auto;
+        }
         #sign-in {
             background-color: #4285f4;
             border-color: #4285f4;
@@ -103,6 +110,29 @@
             padding: 8px 14px;
         }
         #search {
+            border: 0px solid black;
+            width: 100%;
+            border-radius: 25px;
+        }
+        #search-submit {
+            background-color: #f2f2f2;
+            border-color: #f2f2f2;
+            font-family: arial, sans-serif;
+            font-size: 13px;
+            color: #5f6368;
+            border-style: none;
+            border-radius: 3px;
+            padding: 8px 14px;
+        }
+        #lucky-submit {
+            background-color: #f2f2f2;
+            border-color: #f2f2f2;
+            font-family: arial, sans-serif;
+            font-size: 13px;
+            color: #5f6368;
+            border-style: none;
+            border-radius: 3px;
+            padding: 8px 14px;
         }
         #footer {
             position: absolute;
@@ -129,7 +159,7 @@
                                 <ul>
                                     <li><a href=https://mail.google.com/mail>Gmail</a></li>
                                     <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
-                                    <li><button type="button" id="google-apps" name="google-apps">placeholder</button></li>
+                                    <li><img src="images/GoogleApps.png" type="button" id="google-apps" name="google-apps"></li>
                                     <li><button type="button" id="sign-in" name="sign-in">Sign in</button></li>
                                 </ul>
                             </div>
@@ -152,7 +182,7 @@
                             </button>
                         </div>
                         <div class="button-lucky">
-                            <button type="button"id="lucky" name="lucky">
+                            <button type="button"id="lucky-submit" name="lucky-submit">
                                 I'm Feeling Lucky
                             </button>
                         </div>
